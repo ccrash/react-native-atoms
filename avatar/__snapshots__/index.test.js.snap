@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders an avatar from Image 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#222",
+      "borderColor": "#000000",
+      "borderRadius": 50,
+      "borderWidth": 1,
+      "height": 40,
+      "justifyContent": "center",
+      "width": 40,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/assets/img/avatar.jpg",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 50,
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Renders an avatar from Name using capital letters 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#222",
+      "borderColor": "#000000",
+      "borderRadius": 50,
+      "borderWidth": 1,
+      "height": 40,
+      "justifyContent": "center",
+      "width": 40,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    S F
+  </Text>
+</View>
+`;
