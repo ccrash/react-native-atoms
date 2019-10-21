@@ -1,7 +1,8 @@
 {
-    "name": "@atoms",
-    "version": "0.0.1",
-    "private": true,
+    "name": "@ccrash/react-native-atoms",
+    "version": "0.1.0",
+    "main": "./index.js",
+    "private": false,
 
     "dependencies": {
         "@react-native-community/slider": "^2.0.2",
