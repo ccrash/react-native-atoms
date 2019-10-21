@@ -7,9 +7,14 @@ import { Text } from 'react-native'
 
 import styles from './style'
 
-export default class ToggleIcon extends PureComponent {
+export class ToggleIcon extends PureComponent {
+  state ={
+    currentState: true
+  }
+
   static defaultProps = {
-    state: false,
+    defaultState: false,
+    forceState: null,
     onTrueIcon: null,
     onFalseIcon: null,
     onPress: () => {},
@@ -18,7 +23,8 @@ export default class ToggleIcon extends PureComponent {
   }
 
   static propTypes = {
-    state: PropTypes.bool,
+    defaultState: PropTypes.bool,
+    forceState: PropTypes.bool,
     type: PropTypes.string,
     size: PropTypes.number,
     onTrueIcon: PropTypes.string,
@@ -30,10 +36,35 @@ export default class ToggleIcon extends PureComponent {
     innerStyleWhenFalse: Text.propTypes.style,
   }
 
+  componentDidMount() {
+    const {defaultState, forceState} = this.props
+    if(forceState != null) {
+      this.setState({currentState: forceState})
+    } else {
+      this.setState({currentState: defaultState})
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    const { forceState } = this.props
+    if (forceState != prevProps.forceState) {
+      this.setState({currentState: forceState})
+    }
+  }
+
+  onToggle = () => {
+    if(forceState != null) {
+      const {currentState} = this.state
+      const {onPressWhenTrue, onPressWhenFalse} = this.props
+      this.setState({currentState: !currentState})
+      return currentState ? onPressWhenTrue() : onPressWhenFalse()
+    }
+  }
+
   render() {
+    const {currentState} = this.state
     const {
       type,
-      state,
       size,
       onTrueIcon,
       onFalseIcon,
@@ -44,7 +75,7 @@ export default class ToggleIcon extends PureComponent {
     } = this.props
     return (
       <View style={outerStyle}>
-        {state ? (
+        {currentState ? (
           <Icon type={type} style={innerStyleWhenTrue || innerStyle} name={onTrueIcon} size={size} />
         ) : (
           <Icon type={type} style={innerStyleWhenFalse || innerStyle} name={onFalseIcon} size={size} />

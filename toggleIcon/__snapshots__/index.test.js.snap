@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Testing ToggleIcon component Renders a ToggleIcon as expected 1`] = `ShallowWrapper {}`;
-
-exports[`Testing ToggleIcon component Renders a ToggleIcon as expected 2`] = `ShallowWrapper {}`;

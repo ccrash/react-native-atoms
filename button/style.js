@@ -5,8 +5,8 @@ import Size from '../../../settings/sizes'
 
 export const style = StyleSheet.create({
   outerStyle: {
+    flex: 1,
     padding: Size.padding.big,
-    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: Color.grey,

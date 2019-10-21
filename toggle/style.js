@@ -10,6 +10,12 @@ export const style = StyleSheet.create({
     fontSize: 36,
     marginLeft: Size.margin.big,
   },
+  buttonInnerStyle: {
+    color: Color.black
+  },
+  buttonOuterStyle: {
+
+  }
 })
 
 export default style

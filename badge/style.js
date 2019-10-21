@@ -7,12 +7,13 @@ export const style = StyleSheet.create({
   container: {
     paddingVertical: Size.padding.small,
     paddingHorizontal: Size.padding.regular,
-    backgroundColor: Color.accent,
+    backgroundColor: Color.badge,
     borderRadius: 15,
     marginRight: Size.margin.regular,
   },
   counter: {
     fontSize: 10,
+    fontWeight: Size.weight.bold,
     color: Color.white,
   },
 })
