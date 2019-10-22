@@ -10,7 +10,6 @@ export default class CcSwitch extends PureComponent {
     disabled: false,
     selected: false,
     onValueChange: () => {},
-    style: styles.switch,
   }
 
   static propTypes = {
@@ -31,7 +30,7 @@ export default class CcSwitch extends PureComponent {
       <Switch
         disabled={disabled}
         value={selected}
-        style={style}
+        style={[styles.switch, style]}
         trackColor={this.color}
         ios_backgroundColor={this.color.background}
         onValueChange={() => onValueChange()}

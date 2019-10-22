@@ -9,8 +9,6 @@ import styles from './style'
 export default class CcRadioButton extends PureComponent {
   static defaultProps = {
     selected: false,
-    outerStyle: styles.outerStyle,
-    innerStyle: styles.innerStyle,
   }
 
   static propTypes = {
@@ -21,6 +19,6 @@ export default class CcRadioButton extends PureComponent {
 
   render() {
     const { selected, outerStyle, innerStyle } = this.props
-    return <View style={outerStyle}>{selected ? <View style={innerStyle} /> : null}</View>
+    return <View style={[styles.outerStyle, outerStyle]}>{selected ? <View style={[styles.innerStyle, innerStyle]} /> : null}</View>
   }
 }

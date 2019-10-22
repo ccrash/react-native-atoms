@@ -10,16 +10,17 @@ import styles from './style'
 export default class Logo extends PureComponent {
   static defaultProps = {
     mode: 'text',
+    title: 'Your logo',
     style: styles.silkfred,
     negative: false,
   }
 
   render() {
-    const { mode, style, negative } = this.props
+    const { mode, style, negative, title } = this.props
     const source = negative ? Images.logo_header_negative : Images.logo_header
     return (
       <View style={styles.container}>
-        {mode == 'image' ? <Image style={style} source={source} /> : <Text style={style}>SilkFred</Text>}
+        {mode == 'image' ? <Image style={style} source={source} /> : <Text style={style}>{title}</Text>}
       </View>
     )
   }
