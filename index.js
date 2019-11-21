@@ -8,7 +8,7 @@ import Image from './image'
 import Logo from './logo'
 import Modal from './modal'
 import RadioButton from './radioButton'
-// import Slider from './slider'
+import Slider from './slider'
 import Switch from './switch'
 import Text from './text'
 import { ToggleButton, ToggleIcon } from './toggle'
@@ -25,6 +25,7 @@ module.exports = {
   Logo,
   Modal,
   RadioButton,
+  Slider,
   Switch,
   Text,
   ToggleButton,

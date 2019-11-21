@@ -10,7 +10,7 @@ export const style = StyleSheet.create({
     alignSelf: 'center',
     alignContent: 'center',
   },
-  silkfred: {
+  text: {
     fontSize: Size.font.h3,
     fontWeight: '500',
     color: '#000',

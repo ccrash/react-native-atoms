@@ -12,9 +12,7 @@ export default class Button extends PureComponent {
     title: null,
     value: null,
     children: null,
-    outerStyle: styles.outerStyle,
-    innerStyle: styles.innerStyle,
-    onPress: value => {},
+    onPress: () => {},
   }
 
   static propTypes = {
@@ -29,11 +27,11 @@ export default class Button extends PureComponent {
   render() {
     const { value, title, onPress, children, innerStyle, outerStyle } = this.props
     return (
-      <TouchableOpacity style={outerStyle} activeOpacity={0.5} onPress={() => onPress(value)}>
+      <TouchableOpacity style={[styles.outerStyle, outerStyle]} activeOpacity={0.5} onPress={() => onPress(value)}>
         {title ? (
           <View style={styles.innerViewStyle}>
             {children}
-            <Text style={innerStyle}>{title}</Text>
+            <Text style={[styles.innerStyle, innerStyle]}>{title}</Text>
           </View>
         ) : (
           children
