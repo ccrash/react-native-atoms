@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
 
-import Color from '../../../settings/colors'
-import Size from '../../../settings/sizes'
+import Color from '@settings/colors'
+import Size from '@settings/sizes'
 
 export const style = StyleSheet.create({
   outerStyle: {},
@@ -11,11 +11,9 @@ export const style = StyleSheet.create({
     marginLeft: Size.margin.big,
   },
   buttonInnerStyle: {
-    color: Color.black
+    color: Color.black,
   },
-  buttonOuterStyle: {
-
-  }
+  buttonOuterStyle: {},
 })
 
 export default style

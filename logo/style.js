@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import Size from '../../../settings/sizes'
+import Size from '@settings/sizes'
 
 export const style = StyleSheet.create({
   container: {

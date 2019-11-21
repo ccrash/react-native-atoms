@@ -20,13 +20,6 @@ export const IconManager = {
   back: isIos ? 'ios-arrow-back' : 'md-arrow-back',
   orders: isIos ? 'ios-filing' : 'md-filing',
   facebook: isIos ? 'ios-facebook-square' : 'md-facebook-square',
-  play: isIos ? 'ios-play' : 'md-play',
-  pause: isIos ? 'ios-pause' : 'md-pause',
-  stop: isIos ? 'ios-square' : 'md-square',
-  repeat: isIos ? 'ios-repeat' : 'md-repeat',
-  alarm: isIos ? 'ios-alarm' : 'md-alarm',
-  music: isIos ? 'ios-musical-notes' : 'md-musical-notes',
-  exercise: isIos ? 'ios-today' : 'md-today',
 }
 
 export default IconManager

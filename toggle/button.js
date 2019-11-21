@@ -8,8 +8,8 @@ import { Text } from 'react-native'
 import styles from './style'
 
 export class ToggleButton extends PureComponent {
-  state ={
-    currentState: true
+  state = {
+    currentState: true,
   }
 
   static defaultProps = {
@@ -53,32 +53,32 @@ export class ToggleButton extends PureComponent {
   }
 
   componentDidMount() {
-    const {defaultState, forceState} = this.props
-    if(forceState != null) {
-      this.setState({currentState: forceState})
+    const { defaultState, forceState } = this.props
+    if (forceState != null) {
+      this.setState({ currentState: forceState })
     } else {
-      this.setState({currentState: defaultState})
+      this.setState({ currentState: defaultState })
     }
   }
 
   componentDidUpdate(prevProps) {
     const { forceState } = this.props
     if (forceState != prevProps.forceState) {
-      this.setState({currentState: forceState})
+      this.setState({ currentState: forceState })
     }
   }
 
   onToggle = () => {
-    const {onPressWhenTrue, onPressWhenFalse, forceState} = this.props
-    const {currentState} = this.state
-    if(forceState == null) {
-      this.setState({currentState: !currentState})
+    const { onPressWhenTrue, onPressWhenFalse, forceState } = this.props
+    const { currentState } = this.state
+    if (forceState == null) {
+      this.setState({ currentState: !currentState })
     }
     return currentState ? onPressWhenTrue() : onPressWhenFalse()
   }
 
   render() {
-    const {currentState} = this.state
+    const { currentState } = this.state
     const {
       type,
       outerStyle,
@@ -97,14 +97,15 @@ export class ToggleButton extends PureComponent {
     const inner = [styles.buttonInnerStyle, innerStyle, currentState ? innerStyleWhenTrue : innerStyleWhenFalse]
     const outer = [styles.buttonOuterStyle, outerStyle, currentState ? outerStyleWhenTrue : outerStyleWhenFalse]
     return (
-      <Button outerStyle={outer} 
-              innerStyle={inner} 
-              onPress={() => this.onToggle()}
-              title={currentState ? onTrueText : onFalseText}>
-        {
-          (onTrueIcon || onFalseIcon) && 
-          <Icon type={type} style={inner} name={currentState ? onTrueIcon : onFalseIcon} size={30}/>
-        }
+      <Button
+        outerStyle={outer}
+        innerStyle={inner}
+        onPress={() => this.onToggle()}
+        title={currentState ? onTrueText : onFalseText}
+      >
+        {(onTrueIcon || onFalseIcon) && (
+          <Icon type={type} style={inner} name={currentState ? onTrueIcon : onFalseIcon} size={30} />
+        )}
       </Button>
     )
   }

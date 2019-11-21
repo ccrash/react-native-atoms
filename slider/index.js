@@ -1,13 +1,12 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import Slider from '@react-native-community/slider';
+import Slider from '@react-native-community/slider'
 
 import styles from './style'
 
 export default class ccSlider extends PureComponent {
-
   state = {
-    isPlaying: false
+    isPlaying: false,
   }
 
   static defaultProps = {

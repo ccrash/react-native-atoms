@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Text, Switch, Platform } from 'react-native'
 
-import Color from '../../../settings/colors'
+import Color from '@settings/colors'
 import styles from './style'
 
 export default class CcSwitch extends PureComponent {
@@ -10,6 +10,7 @@ export default class CcSwitch extends PureComponent {
     disabled: false,
     selected: false,
     onValueChange: () => {},
+    style: styles.switch,
   }
 
   static propTypes = {
@@ -30,7 +31,7 @@ export default class CcSwitch extends PureComponent {
       <Switch
         disabled={disabled}
         value={selected}
-        style={[styles.switch, style]}
+        style={style}
         trackColor={this.color}
         ios_backgroundColor={this.color.background}
         onValueChange={() => onValueChange()}
