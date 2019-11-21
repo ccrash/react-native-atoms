@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Text as rnText, Switch as rnSwitch, Platform } from 'react-native'
 
-import Color from '@settings/colors'
+import { Color } from '../_settings'
+
 import styles from './style'
 
 export default class Switch extends PureComponent {

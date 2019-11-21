@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import DefaultStyles from '@settings/defaultStyles'
-import Color from '@settings/colors'
-import Size from '@settings/sizes'
+import { DefaultStyles, Size } from '../_settings'
 
 export const style = StyleSheet.create({
   ...DefaultStyles,

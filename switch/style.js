@@ -1,7 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import Size from '@settings/sizes'
-import Color from '@settings/colors'
+import { Color, Size } from '../_settings'
 
 export const style = StyleSheet.create({
   switch: {
