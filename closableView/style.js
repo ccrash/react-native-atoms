@@ -1,31 +1,40 @@
 import { StyleSheet } from 'react-native'
 
-import { DefaultStyles, Size } from '../_settings'
+import { DefaultStyles, Color, Size } from '../_settings'
 
 export const style = StyleSheet.create({
   ...DefaultStyles,
   container: {
+    ...DefaultStyles.centredRow,
+    flex: 1,
+  },
+  view: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: Size.padding.regular,
-    width: '100%',
-    borderWidth: 1,
+    padding: Size.padding.big,
+    width: 200,
+    backgroundColor: Color.white,
+    borderRadius: Size.radius.big,
   },
-  headRow: {
+  head: {
     ...DefaultStyles.expandedRow,
   },
-  title: {
+  headLeft: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headTitle: {
     flex: 6,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  toggle: {
+  headRight: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  icon: {},
 })
 
 export default style

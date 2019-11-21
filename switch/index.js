@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Text, Switch, Platform } from 'react-native'
+import { Text as rnText, Switch as rnSwitch, Platform } from 'react-native'
 
-import Color from '../../../settings/colors'
+import { Color } from '../_settings'
+
 import styles from './style'
 
-export default class CcSwitch extends PureComponent {
+export default class Switch extends PureComponent {
   static defaultProps = {
     disabled: false,
     selected: false,
@@ -16,7 +17,7 @@ export default class CcSwitch extends PureComponent {
     disabled: PropTypes.bool,
     selected: PropTypes.bool,
     onValueChange: PropTypes.func,
-    style: Text.propTypes.style,
+    style: rnText.propTypes.style,
   }
 
   color = {
@@ -27,7 +28,7 @@ export default class CcSwitch extends PureComponent {
   render() {
     const { disabled, selected, onValueChange, style } = this.props
     return (
-      <Switch
+      <rnSwitch
         disabled={disabled}
         value={selected}
         style={[styles.switch, style]}

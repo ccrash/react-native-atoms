@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 
-import { Text } from 'react-native'
+import { Text as rnText } from 'react-native'
 
-export default class CcText extends PureComponent {
+export default class Text extends PureComponent {
   render() {
     const { children } = this.props
-    return <Text {...this.props}>{children}</Text>
+    return <rnText {...this.props}>{children}</rnText>
   }
 }

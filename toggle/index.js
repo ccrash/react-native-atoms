@@ -1,4 +1,9 @@
 import React from 'react'
 
-export { ToggleIcon } from './icon'
-export { ToggleButton } from './button'
+import ToggleIcon from './icon'
+import ToggleButton from './button'
+
+module.exports = {
+    ToggleIcon,
+    ToggleButton,
+}

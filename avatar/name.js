@@ -14,16 +14,16 @@ export default class AvatarFromName extends PureComponent {
 
   static propTypes = {
     name: PropTypes.string.isRequired,
-    outerStyle: rnText.propTypes.style,
-    innerStyle: rnText.propTypes.style,
+    containerStyle: rnText.propTypes.style,
+    textStyle: rnText.propTypes.style,
   }
 
   render() {
-    const { name, outerStyle, innerStyle } = this.props
+    const { name, containerStyle, textStyle } = this.props
     const [firstName = '', lastName = ''] = name.trim().split(' ')
     return (
-      <View style={[styles.container, outerStyle]}>
-        <Text style={[styles.text, innerStyle]}>{firstName[0] + (lastName[0] ? ' ' + lastName[0] : '')}</Text>
+      <View style={[styles.container, containerStyle]}>
+        <Text style={[styles.text, textStyle]}>{firstName[0] + (lastName[0] ? ' ' + lastName[0] : '')}</Text>
       </View>
     )
   }

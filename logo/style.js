@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import Size from '../../../settings/sizes'
+import { Size } from '../_settings'
 
 export const style = StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ export const style = StyleSheet.create({
     alignSelf: 'center',
     alignContent: 'center',
   },
-  silkfred: {
+  text: {
     fontSize: Size.font.h3,
     fontWeight: '500',
     color: '#000',
