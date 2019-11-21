@@ -23,9 +23,7 @@ export default class AvatarFromName extends PureComponent {
     const [firstName = '', lastName = ''] = name.trim().split(' ')
     return (
       <View style={[styles.container, containerStyle]}>
-        <Text style={[styles.text, textStyle]}>
-          {firstName[0] + (lastName[0] ? ' ' + lastName[0] : '')}
-        </Text>
+        <Text style={[styles.text, textStyle]}>{firstName[0] + (lastName[0] ? ' ' + lastName[0] : '')}</Text>
       </View>
     )
   }

@@ -115,17 +115,20 @@ exports[`Testing Button component Renders a button with text passed as props 1`]
       }
     }
   >
-    <Text
+    <rnText
       style={
-        Object {
-          "color": "#404040",
-          "fontSize": 22,
-          "fontWeight": "600",
-        }
+        Array [
+          Object {
+            "color": "#404040",
+            "fontSize": 22,
+            "fontWeight": "600",
+          },
+          undefined,
+        ]
       }
     >
       Hello world
-    </Text>
+    </rnText>
   </View>
 </View>
 `;

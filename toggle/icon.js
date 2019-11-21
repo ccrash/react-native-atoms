@@ -7,7 +7,7 @@ import { Text } from 'react-native'
 
 import styles from './style'
 
-export class ToggleIcon extends PureComponent {
+export default class ToggleIcon extends PureComponent {
   state = {
     currentState: true,
   }

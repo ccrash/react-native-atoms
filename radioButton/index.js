@@ -19,6 +19,10 @@ export default class CcRadioButton extends PureComponent {
 
   render() {
     const { selected, outerStyle, innerStyle } = this.props
-    return <View style={[styles.outerStyle, outerStyle]}>{selected ? <View style={[styles.innerStyle, innerStyle]} /> : null}</View>
+    return (
+      <View style={[styles.outerStyle, outerStyle]}>
+        {selected ? <View style={[styles.innerStyle, innerStyle]} /> : null}
+      </View>
+    )
   }
 }
