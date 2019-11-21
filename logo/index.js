@@ -17,6 +17,7 @@ export default class Logo extends PureComponent {
   static propTypes = {
     mode: PropTypes.string,
     title: PropTypes.string,
+    source: PropTypes.any,
     outerStyle: rnText.propTypes.style,
     innerStyle: rnText.propTypes.style,
   }
