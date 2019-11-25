@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-import { Text as rnText, TouchableOpacity } from 'react-native'
+import { Text as rnText, ViewPropTypes, TouchableOpacity } from 'react-native'
 import Text from '../text'
 import View from '../view'
 
@@ -21,7 +21,7 @@ export default class Button extends PureComponent {
     onPress: PropTypes.func,
     children: PropTypes.any,
     innerStyle: rnText.propTypes.style,
-    outerStyle: rnText.propTypes.style,
+    outerStyle: ViewPropTypes.style,
   }
 
   render() {

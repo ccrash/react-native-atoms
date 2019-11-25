@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Text as rnText, Switch as rnSwitch, Platform } from 'react-native'
+import { ViewPropTypes, Switch as rnSwitch, Platform } from 'react-native'
 
 import { Color } from '../_settings'
 
@@ -17,7 +17,7 @@ export default class Switch extends PureComponent {
     disabled: PropTypes.bool,
     selected: PropTypes.bool,
     onValueChange: PropTypes.func,
-    style: rnText.propTypes.style,
+    style: ViewPropTypes.style,
   }
 
   color = {

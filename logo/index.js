@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Text as rnText } from 'react-native'
+import { ViewPropTypes } from 'react-native'
 
 import View from '../view'
 import Text from '../text'
@@ -18,8 +18,8 @@ export default class Logo extends PureComponent {
     mode: PropTypes.string,
     title: PropTypes.string,
     source: PropTypes.any,
-    outerStyle: rnText.propTypes.style,
-    innerStyle: rnText.propTypes.style,
+    outerStyle: ViewPropTypes.style,
+    innerStyle: ViewPropTypes.style,
   }
 
   render() {
@@ -27,7 +27,7 @@ export default class Logo extends PureComponent {
     return (
       <View style={[styles.container, outerStyle]}>
         {mode == 'image' ? (
-          <Image style={style} source={source} />
+          <Image style={[styles.image, innerStyle]} source={source} />
         ) : (
           <Text style={[styles.text, innerStyle]}>{title}</Text>
         )}

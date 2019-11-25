@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Text as rnText } from 'react-native'
+import { ViewPropTypes } from 'react-native'
 
 import View from '../view'
 
@@ -13,8 +13,8 @@ export default class CcRadioButton extends PureComponent {
 
   static propTypes = {
     selected: PropTypes.bool,
-    innerStyle: rnText.propTypes.style,
-    outerStyle: rnText.propTypes.style,
+    innerStyle: ViewPropTypes.style,
+    outerStyle: ViewPropTypes.style,
   }
 
   render() {

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Text as rnText } from 'react-native'
+import { ViewPropTypes } from 'react-native'
 
 import View from '../view'
 import Text from '../text'
@@ -14,8 +14,8 @@ export default class AvatarFromName extends PureComponent {
 
   static propTypes = {
     name: PropTypes.string.isRequired,
-    containerStyle: rnText.propTypes.style,
-    textStyle: rnText.propTypes.style,
+    containerStyle: ViewPropTypes.style,
+    textStyle: ViewPropTypes.style,
   }
 
   render() {
