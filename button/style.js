@@ -5,7 +5,6 @@ import { Color, Size } from '../_settings'
 export const style = StyleSheet.create({
   outerStyle: {
     padding: Size.padding.big,
-    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: Color.grey,
