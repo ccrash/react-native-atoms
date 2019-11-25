@@ -18,7 +18,7 @@ exports[`Renders an avatar from Name using capital letters 1`] = `
     ]
   }
 >
-  <rnText
+  <Text
     style={
       Array [
         Object {
@@ -29,6 +29,6 @@ exports[`Renders an avatar from Name using capital letters 1`] = `
     }
   >
     S F
-  </rnText>
+  </Text>
 </View>
 `;

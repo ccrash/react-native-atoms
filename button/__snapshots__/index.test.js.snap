@@ -115,7 +115,7 @@ exports[`Testing Button component Renders a button with text passed as props 1`]
       }
     }
   >
-    <rnText
+    <Text
       style={
         Array [
           Object {
@@ -128,7 +128,7 @@ exports[`Testing Button component Renders a button with text passed as props 1`]
       }
     >
       Hello world
-    </rnText>
+    </Text>
   </View>
 </View>
 `;
