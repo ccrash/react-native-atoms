@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Button from '../button'
 import Icon from '../icon'
-import { rnText } from 'react-native'
+import { ViewPropTypes } from 'react-native'
 
 import styles from './style'
 
@@ -34,19 +34,19 @@ export default class ToggleButton extends PureComponent {
     forceState: PropTypes.bool,
     type: PropTypes.string,
     size: PropTypes.number,
-    outerStyle: rnText.propTypes.style,
-    innerStyle: rnText.propTypes.style,
+    outerStyle: ViewPropTypes.style,
+    innerStyle: ViewPropTypes.style,
 
     onTrueIcon: PropTypes.string,
     onTrueText: PropTypes.string,
-    outerStyleWhenTrue: rnText.propTypes.style,
-    innerStyleWhenTrue: rnText.propTypes.style,
+    outerStyleWhenTrue: ViewPropTypes.style,
+    innerStyleWhenTrue: ViewPropTypes.style,
     onPressWhenTrue: PropTypes.func,
 
     onFalseIcon: PropTypes.string,
     onFalseText: PropTypes.string,
-    outerStyleWhenFalse: rnText.propTypes.style,
-    innerStyleWhenFalse: rnText.propTypes.style,
+    outerStyleWhenFalse: ViewPropTypes.style,
+    innerStyleWhenFalse: ViewPropTypes.style,
     onPressWhenFalse: PropTypes.func,
   }
 
