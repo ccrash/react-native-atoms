@@ -7,9 +7,9 @@
 ios/build
 ios/Pods
 build/
-ios/AppStore_com.SilkFredLtd.SilkFred.mobileprovision
-ios/Development_com.SilkFredLtd.SilkFred.mobileprovision
-ios/SilkFred.app.dSYM.zip
+ios/*.mobileprovision
+ios/*.mobileprovision
+ios/*.dSYM.zip
 ios/assets/
 ios/main.jsbundle.meta
 *.pbxuser
@@ -55,6 +55,9 @@ buck-out/
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/
 
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
