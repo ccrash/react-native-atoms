@@ -27,6 +27,7 @@ export const IconManager = {
   alarm: isIos ? 'ios-alarm' : 'md-alarm',
   music: isIos ? 'ios-musical-notes' : 'md-musical-notes',
   exercise: isIos ? 'ios-today' : 'md-today',
+  video: isIos ? 'ios-videocam' : 'md-videocam',
 }
 
 export default IconManager
